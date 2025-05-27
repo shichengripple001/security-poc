@@ -8,6 +8,7 @@ on:
 jobs:
   semgrep:
     name: Semgrep Scan
+    id: semgrep-scan
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -29,6 +30,7 @@ jobs:
 
   sbom-trivy:
     name: SBOM and Trivy Scan
+    needs: semgrep-scan
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
