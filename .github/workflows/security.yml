@@ -40,6 +40,8 @@ jobs:
           curl -sSfL https://raw.githubusercontent.com/anchore/syft/main/install.sh | sh -s -- -b /usr/local/bin
           syft version
 
+      - name: Install dependencies
+        run: npm install
       - name: Generate SBOM (Syft)
         run: |
           syft . -o cyclonedx-json > sbom.cdx.json
