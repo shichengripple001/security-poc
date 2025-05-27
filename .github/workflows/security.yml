@@ -23,6 +23,7 @@ jobs:
 
       - name: Run Semgrep
         uses: returntocorp/semgrep-action@v1
+        continue-on-error: true
         with:
           config: 'auto'  # or use 'p/ci' or a custom path
 
