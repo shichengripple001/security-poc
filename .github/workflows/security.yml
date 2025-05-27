@@ -57,5 +57,5 @@ jobs:
 
       - name: Scan SBOM with Trivy
         run: |
-          trivy sbom --input sbom.cdx.json
+          trivy sbom sbom.cdx.json
 
