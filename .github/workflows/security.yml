@@ -6,9 +6,8 @@ on:
   pull_request:
 
 jobs:
-  semgrep:
+  semgrep-scan:
     name: Semgrep Scan
-    id: semgrep-scan
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
